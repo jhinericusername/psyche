@@ -13,16 +13,12 @@ def dict_to_utf8(old_dict):
             v = v.encode(encoding='utf-8', errors="replace")
         
         new_dict[k] = v
-    
     return new_dict
-
-
 
 
 api_key = "API-KEY-HERE"
 
 tavily = TavilyClient(api_key=api_key)
-
 
 response = tavily.search(query="Give me the links to 15 articles about the 2024 election", search_depth="advanced", max_results=100)
 
